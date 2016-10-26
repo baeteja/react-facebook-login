@@ -3,7 +3,7 @@ import React, { PropTypes } from 'react';
 import styles from '../styles/facebook.scss';
 import objectToParams from './objectToParams';
 
-class FacebookLogin extends React.Component {
+class FacebookLoginButton extends React.Component {
 
   static propTypes = {
     callback: PropTypes.func.isRequired,
@@ -137,6 +137,7 @@ class FacebookLogin extends React.Component {
 
     return (
       <span>
+        <p>test</p>
         {isIconString && (
           <link
             rel="stylesheet"
@@ -160,4 +161,4 @@ class FacebookLogin extends React.Component {
   }
 }
 
-export default FacebookLogin;
+export default FacebookLoginButton;
