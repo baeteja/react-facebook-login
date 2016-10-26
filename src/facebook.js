@@ -3,7 +3,7 @@ import React, { PropTypes } from 'react';
 import styles from '../styles/facebook.scss';
 import objectToParams from './objectToParams';
 
-class FacebookLoginButton extends React.Component {
+class FacebookLogin extends React.Component {
 
   static propTypes = {
     callback: PropTypes.func.isRequired,
@@ -132,12 +132,11 @@ class FacebookLoginButton extends React.Component {
   };
 
   render() {
-    const { cssClass, size, icon, textButton, typeButton } = this.props;
+    const { cssClass, size, icon, textButton } = this.props;
     const isIconString = typeof icon === 'string';
 
     return (
       <span>
-        <p>test</p>
         {isIconString && (
           <link
             rel="stylesheet"
@@ -146,7 +145,6 @@ class FacebookLoginButton extends React.Component {
         )}
         <button
           className={`${cssClass} ${size}`}
-          type={`${typeButton}`}
           onClick={this.click}
         >
           {icon && isIconString && (
@@ -161,4 +159,4 @@ class FacebookLoginButton extends React.Component {
   }
 }
 
-export default FacebookLoginButton;
+export default FacebookLogin;
